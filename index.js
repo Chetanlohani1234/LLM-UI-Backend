@@ -10,7 +10,7 @@ const cors = require("cors");
 app.use(cors());
 
 
-app.use('/uploads', express.static('uploads'));
+//app.use('/uploads', express.static('uploads'));
 
 
 
