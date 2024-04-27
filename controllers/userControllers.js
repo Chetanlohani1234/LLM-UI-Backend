@@ -51,7 +51,7 @@ module.exports.userSignUp = async (req, res) => {
         } = req.body;
 
         if (role === "user") {
-            const existingUser = await User.findOne({ role: { $in: ["user"] } });
+            const existingUser = await User.find({ role: { $in: ["user"] } });
             if (existingUser) {
                 response.success = false;
                 response.message = `${role} already exists. Only one ${role} allowed.`;
